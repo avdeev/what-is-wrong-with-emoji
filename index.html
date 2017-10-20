@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Что не так с эмоджи</title>
+  <title>Что не так с эмоджи - Алексей Авдеев</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,12 +12,12 @@
 <body class="shower list">
   <header class="caption">
     <h1>Что не так с эмоджи</h1>
-    <p>Решаем проблему, попутно разбираясь в спецификациях эмоджи и Unicode.</p>
+    <p><a href="https://alexey-avdeev.com/">Алексей Авдеев</a>, Neuron.Digital</p>
   </header>
 
   <section class="slide" id="cover">
     <h2>Что не так с эмоджи</h2>
-    <p>Решаем проблему, попутно разбираясь в спецификациях эмоджи и Unicode.</p>
+    <p>Решаем проблему, попутно разбираясь в спецификациях Emoji и Unicode.</p>
     <figure>
       <img class="cover" src="pictures/Emojione_1F914.svg" alt="Emoji">
     </figure>
@@ -122,11 +122,11 @@
   <section class="slide">
     <h2>Клавиатуры emoji ⌨️</h2>
     <ol>
-      <li class="next">Android 4.3</li>
-      <li class="next">Windows 8.1</li>
-      <li class="next">iOS 5</li>
-      <li class="next">OS X 10.7 Lion</li>
-      <li class="next">Не очень трудно самому написать такую клавиатуру</li>
+      <li class="next">📱 Android 4.3</li>
+      <li class="next">🖥️  Windows 8.1</li>
+      <li class="next">📱 iOS 5</li>
+      <li class="next">🖥️  OS X 10.7 Lion</li>
+      <li class="next">🤔 Не очень трудно самому написать такую клавиатуру</li>
     </ol>
   </section>
 
@@ -255,6 +255,13 @@
   </section>
 
   <section class="slide">
+    <h2>🏳️ Флаги</h2>
+    <div style="text-align: center; font-size: 80px;">🇧 + 🇾 = 🇧🇾</div>
+    <div style="text-align: center; font-size: 80px;">🇷 + 🇺 = 🇷🇺</div>
+  </section>
+
+
+  <section class="slide">
     <h2>Multi-Person Groupings</h2>
 
     <pre>U+200D ZERO WIDTH JOINER (HTML &#x26;#8205; &#x26;zwj;)</pre>
@@ -302,17 +309,16 @@
     <div style="text-align: center; font-size: 80px;">👩 + ❤️ + 💋 + 👨 = 👩&zwj;❤️&zwj;💋&zwj;👨</div>
     <div style="text-align: center; font-size: 80px;">👩 + ❤️ + 💋 + 👩 = 👩&zwj;❤️&zwj;💋&zwj;👩</div>
   </section>
-<li></li>
-
-  <section class="slide">
-    <h2>Multi-Person Groupings</h2>
-    <div style="text-align: center; font-size: 120px;">🏳 + 🌈 = 🏳&zwj;🌈</div>
-  </section>
 
   <section class="slide">
     <h2>Multi-Person Groupings</h2>
     <div style="text-align: center; font-size: 80px;">👨 + 👩 + 👧 = 👨&zwj;👩&zwj;👧</div>
     <div style="text-align: center; font-size: 80px;">👩 + 👩 + 👧 + 👧 = 👩&zwj;👩&zwj;👧&zwj;👧</div>
+  </section>
+
+  <section class="slide">
+    <h2>Multi-Person Groupings</h2>
+    <div style="text-align: center; font-size: 120px;">🏳 + 🌈 = 🏳&zwj;🌈</div>
   </section>
 
   <!-- слом, с эмоджи что-то не так -->
@@ -359,7 +365,30 @@
   <!-- объясняем проблемы -->
 
   <section class="slide">
-    <h2 class="shout">Множество реализаций</h2>
+    <h2 class="shout">😐 Множество реализаций</h2>
+  </section>
+
+  <section class="slide">
+    <h2>🔣 Шрифты</h2>
+    <pre>
+      <code>font-family:</code>
+      <code class="next">  "Apple Color Emoji", <span class="comment">/* iOS, macOS - 34.3 МБ */</span></code>
+      <code class="next">  "NotoColorEmoji", <span class="comment">/* Google (Android, Linux) - 6.92 МБ */</span></code>
+      <code class="next">  "Segoe UI Emoji", <span class="comment">/* Windows - 660.45 КБ */</span></code>
+      <code class="next">  "Segoe UI Symbol", <span class="comment">/* Windows */</span></code>
+      <code class="next">  "EmojiSymbols"; <span class="comment">/* Open Source - 231 КБ */</span></code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>🖼️ Или наборы картинок</h2>
+    <ol style="font-size: 35px;">
+      <li>Facebook</li>
+      <li>Twemoji (Twitter Emoji for Everyone)</li>
+      <li>ВК</li>
+      <li>emojidex (emojidex emoji-as-a-service)</li>
+      <li>можно разобрать шрифт по символам</li>
+    </ol>
   </section>
 
   <section class="slide">
@@ -376,18 +405,6 @@
 
   <section class="slide">
     <img class="cover" src="pictures/implementations_4.png" alt="">
-  </section>
-
-  <section class="slide">
-    <h2>Шрифты</h2>
-    <pre>
-      <code>font-family:</code>
-      <code class="next">  "Apple Color Emoji", <span class="comment">/* iOS, macOS - 34.3 МБ */</span></code>
-      <code class="next">  "NotoColorEmoji", <span class="comment">/* Google (Android, Linux) - 6.92 МБ */</span></code>
-      <code class="next">  "Segoe UI Emoji", <span class="comment">/* Windows - 660.45 КБ */</span></code>
-      <code class="next">  "Segoe UI Symbol", <span class="comment">/* Windows */</span></code>
-      <code class="next">  "EmojiSymbols"; <span class="comment">/* Open Source - 231 КБ */</span></code>
-    </pre>
   </section>
 
   <section class="slide">
@@ -409,7 +426,7 @@
   </section>
 
   <section class="slide">
-    <h2>Проблемы совместимости</h2>
+    <h2>🤷 Проблемы совместимости</h2>
     <div style="font-size: 100px; text-align: center;">
       <span style="font-family: Impact, Charcoal, sans-serif">А</span>
       <span style="font-family: 'Comic Sans MS', cursive, sans-serif">А</span>
@@ -455,7 +472,7 @@
   </section>
 
   <section class="slide">
-    <h2>🖼️ Design Guidelines</h2>
+    <h2>📝 Design Guidelines</h2>
 
     <figure>
       <blockquote>
@@ -467,6 +484,22 @@
 
   <section class="slide">
     <img class="cover" src="pictures/accidentally-sending-friends-a-hairy-heart-emojiexternal.png" alt="">
+  </section>
+
+  <section class="slide">
+    <h2>👌 Решение</h2>
+
+    <pre>
+      <code>Hello, world! &#x1F44B;, &#x1F30E;!</code>
+    </pre>
+
+    <pre class="next">
+      <code>Hello, world!</code>
+      <code>&#x3C;img alt=&#x22;&#x1F44B;&#x22; src=&#x22;/apple40/<mark>1f44b</mark>.png&#x22;&#x3E;,</code>
+      <code>&#x3C;img alt=&#x22;&#x1F30E;&#x22; src=&#x22;/apple40/<mark>1f30e</mark>.png&#x22;&#x3E;!</code>
+    </pre>
+
+    <p class="note">https://github.com/Julia-Lavrova/emoji-js</p>
   </section>
 
   <section class="slide">
@@ -488,28 +521,18 @@
   </section>
 
   <section class="slide">
-    <h2>👌 Решение</h2>
-
-    <pre>
-      <code>Hello, world! &#x1F44B;, &#x1F30E;!</code>
-    </pre>
-
-    <pre class="next">
-      <code>Hello, world!</code>
-      <code>&#x3C;img alt=&#x22;&#x1F44B;&#x22; src=&#x22;/apple40/<mark>1f44b</mark>.png&#x22;&#x3E;,</code>
-      <code>&#x3C;img alt=&#x22;&#x1F30E;&#x22; src=&#x22;/apple40/<mark>1f30e</mark>.png&#x22;&#x3E;!</code>
-    </pre>
-
-    <p class="note">https://github.com/Julia-Lavrova/emoji-js</p>
-  </section>
-
-  <section class="slide">
     <h2>1️⃣ Для одиночных эмоджи</h2>
 
     <pre>
-      <code>'🤙'</code>
-      <code>  .charCodeAt(0)</code>
-      <code>  .toString(16); <span class="comment">// d83e</span></code>
+      <code>'🤙'.charCodeAt(0).toString(16); <span class="comment">// d83e</span></code>
+    </pre>
+
+    <pre>
+      <code>'🤙'.charCodeAt(0).toString(16); <span class="comment">// d83e</span></code>
+    </pre>
+
+    <pre>
+      <code>'🤙'.charCodeAt(0).toString(16); <span class="comment">// d83e</span></code>
     </pre>
   </section>
 
@@ -558,14 +581,17 @@
   <!-- материалы и ссылки -->
 
   <section class="slide">
-    <h2>Спасибо за внимание!</h2>
+    <h2>Материалы</h2>
 
-    <b>Материалы</b>
-    <ol>
+    <ol style="font-size: 40px;">
       <li>http://unicode.org/reports/tr51/</li>
       <li>https://emojipedia.org</li>
       <li>https://github.com/Julia-Lavrova/emoji-js</li>
     </ol>
+  </section>
+
+  <section class="slide">
+    <h2 class="shout">Вопросы❓</h2>
   </section>
 
   <div class="progress"></div>
