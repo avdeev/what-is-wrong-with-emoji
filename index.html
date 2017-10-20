@@ -51,7 +51,7 @@
     </ol>
   </section>
 
-  <!-- несколько слайдов с нашими проектами с emoji + шутка про twitter -->
+  <!-- несколько слайдов с нашими проектами с emoji -->
 
   <section class="slide">
     <img class="cover" src="pictures/bloggy-1.png" alt="">
@@ -131,7 +131,7 @@
   </section>
 
   <section class="slide">
-    <img class="cover" src="pictures/keyboard_ios.jpg" alt="keyboard_ios">
+    <img class="cover" src="pictures/ios-11.1-new-emojis-emojipedia-ipad-keyboard.jpg" alt="keyboard_ios">
   </section>
 
   <section class="slide">
@@ -356,7 +356,27 @@
     <div style="text-align: center; font-size: 160px;">🌐🤩🤦‍♂️</div>
   </section>
 
-  <!-- объяснить баги -->
+  <!-- объясняем проблемы -->
+
+  <section class="slide">
+    <h2 class="shout">Множество реализаций</h2>
+  </section>
+
+  <section class="slide">
+    <img class="cover" src="pictures/implementations_1.png" alt="">
+  </section>
+
+  <section class="slide">
+    <img class="cover" src="pictures/implementations_2.png" alt="">
+  </section>
+
+  <section class="slide">
+    <img class="cover" src="pictures/implementations_3.png" alt="">
+  </section>
+
+  <section class="slide">
+    <img class="cover" src="pictures/implementations_4.png" alt="">
+  </section>
 
   <section class="slide">
     <h2>Шрифты</h2>
@@ -371,7 +391,25 @@
   </section>
 
   <section class="slide">
-    <h2>Совместимость</h2>
+    <h2 class="shout">Плохая поддержка</h2>
+  </section>
+
+  <section class="slide">
+    <h2>🤬 🤬 🤬</h2>
+
+    <div style="text-align: center; font-size: 100px;">🤬 🤬 🤬</div>
+
+    <div style="text-align: center;">
+      <img src="pictures/notdef.gif" alt="">
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2 class="shout">Проблемы совместимости</h2>
+  </section>
+
+  <section class="slide">
+    <h2>Проблемы совместимости</h2>
     <div style="font-size: 100px; text-align: center;">
       <span style="font-family: Impact, Charcoal, sans-serif">А</span>
       <span style="font-family: 'Comic Sans MS', cursive, sans-serif">А</span>
@@ -391,44 +429,34 @@
 
   <section class="slide">
     <ol>
-      <li>ANGRY <img src="pictures/e_angry.png" alt="">
+      <li>Angry <img src="pictures/e_angry.png" alt="">
       </li>
-      <li class="next">HEART EYES <img src="pictures/e_heart_eyes.png" alt="">
+      <li class="next">Heart Eyes <img src="pictures/e_heart_eyes.png" alt="">
       </li>
-      <li class="next">GRIMACING <img src="pictures/e_grimacing.png" alt="">
+      <li class="next">Grimacing <img src="pictures/e_grimacing.png" alt="">
       </li>
-      <li class="next">SCREAM <img src="pictures/e_scream.png" alt="">
+      <li class="next">Scream <img src="pictures/e_scream.png" alt="">
       </li>
     </ol>
   </section>
 
-  <section class="slide">
-    <h2>Поддержка</h2>
-
-    <div style="text-align: center; font-size: 100px;">🤬 🤬 🤬</div>
-
-    <div style="text-align: center;">
-      <img src="pictures/notdef.gif" alt="">
-    </div>
-  </section>
-
-  <!-- заменяем emoji на картинки -->
-
   <!-- обращаемся к спецификации -->
-
   <section class="slide">
-    <h2>Unicode® Technical Standard #51</h2>
+    <h2>Spec Goals</h2>
 
-    <ul>
-      <li>design guidelines for improving interoperability across platforms and implementations</li>
-      <li>background information about emoji characters, and long-term alternatives</li>
-      <li>...</li>
-    </ul>
+    <figure>
+      <blockquote>
+        <p>design guidelines for improving interoperability across platforms and implementations</p>
+      </blockquote>
+      <figcaption>UNICODE EMOJI 5.0</figcaption>
+    </figure>
 
     <p class="note">http://unicode.org/reports/tr51/</p>
   </section>
 
   <section class="slide">
+    <h2>Design Guidelines</h2>
+
     <figure>
       <blockquote>
         <p>While the shape of the character can vary significantly, designers should maintain the same “core” shape, based on the shapes used mostly commonly in industry practice. For example, a U+1F36F HONEY POT encodes for a pictorial representation of a pot of honey, not for some semantic like "sweet". It would be unexpected to represent U+1F36F HONEY POT as a sugar cube, for example. Deviating too far from that core shape can cause interoperability problems: see accidentally-sending-friends-a-hairy-heart-emojiexternal link.</p>
@@ -479,7 +507,9 @@
     <h2>Для одиночных эмоджи</h2>
 
     <pre>
-      <code>'🤙'.charCodeAt(0).toString(16); <span class="comment">// d83e</span></code>
+      <code>'🤙'</code>
+      <code>  .charCodeAt(0)</code>
+      <code>  .toString(16); <span class="comment">// d83e</span></code>
     </pre>
   </section>
 
@@ -500,35 +530,37 @@
   <!-- вывод, своё видение -->
 
   <section class="slide">
-    <img class="cover" src="pictures/927_v4.png" alt="15 стандартов">
-  </section>
-
-  <section class="slide">
     <h2 class="shout">Что делать❓</h2>
   </section>
 
   <section class="slide">
-    <h2>Что делать разработчикам?</h2>
+    <img class="cover" src="pictures/927_v4.png" alt="15 стандартов">
+  </section>
+
+  <section class="slide">
+    <h2>👨‍💻 Разработчикам</h2>
     <ol style="font-size: 40px;">
-      <li>Поддерживает ли Ваш проект эмоджи?</li>
-      <li class="next">Системные шрифты или свой набор?</li>
-      <li class="next">Какую версию эмоджи вы поддерживаете?</li>
+      <li>Поддерживает ли Ваш проект эмоджи</li>
+      <li class="next">Системные шрифты или свой набор</li>
+      <li class="next">Какую версию эмоджи поддерживать</li>
     </ol>
   </section>
 
   <section class="slide">
-    <h2>Что делать дизайнера?</h2>
-    <ol>
-      <li>Поддерживает ли Ваш проект эмоджи?</li>
-      <li class="next">Системные шрифты или свой набор?</li>
-      <li class="next">Какую версию эмоджи вы поддерживаете?</li>
+    <h2>👨‍🎨 Дизайнерам</h2>
+    <ol style="font-size: 40px;">
+      <li>Не придумывать свою реализацию эмоджи</li>
+      <li class="next">Развивать существующие реализации</li>
+      <li class="next">Следить за совместимостью</li>
     </ol>
   </section>
 
   <!-- материалы и ссылки -->
 
   <section class="slide">
-    <h2>❓❓❓Вопросы❓❓❓</h2>
+    <h2>Спасибо за внимание!</h2>
+
+    <b>Материалы</b>
     <ol>
       <li>http://unicode.org/reports/tr51/</li>
       <li>https://emojipedia.org</li>
