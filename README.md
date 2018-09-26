@@ -1,59 +1,88 @@
-# Shower Presentation Template [![Build Status](https://travis-ci.org/shower/shower.svg?branch=master)](https://travis-ci.org/shower/shower)
+# Что не так с эмоджи - Алексей Авдеев
 
-<img src="pictures/logo.png" width="250" alt="Shower logo">
+[WSD Минск, 21 октября 2017](https://wsd.events/2017/10/21/)
 
-> Shower ['ʃəuə] noun. A person or thing that shows.
+Почему мои эмоджи выглядят по-разному в разных браузерах? Что делать, если дизайнеры говорят, что все смайлики должны выглядеть, как на Айфоне? Решаем проблему, попутно разбираясь в спецификациях Emoji и Unicode.
 
-1. Built on HTML, CSS and vanilla JavaScript
-2. Works in all modern browsers
-3. Themes are separated from engine
-4. Modular and extensible
-5. Fully keyboard accessible
-6. Printable to PDF
+Видео - [Что не так с Emoji, Алексей Авдеев](https://www.youtube.com/watch?v=DUwZpLBSuiI)
 
-[See it in action](http://shwr.me/). Includes [Ribbon](https://github.com/shower/ribbon/) and [Material](https://github.com/shower/material/) themes, and [core](https://github.com/shower/core/) with plugins.
+## План доклада
 
-Follow [@shower_me](https://twitter.com/shower_me) for support and updates, [file an issue](https://github.com/shower/shower/issues/new) if you have any.
+### Всем привет.
 
-## Quick Start
+История доклада началась с того, что у нас появился проект, где нужно было выводить в браузер посты из социальных сетей.
+В социалки постят картинки, видео, музыку и всякое разное, но мы договорились, что выводить будем только текст. Но и тут всё оказалось не очень просто.
+Тексты могут содержать упоминания. Их мы решили просто вырезать.
+Потом дошла очередь до кросбраузерного тестированию, и вот тут нас ждал сюрприз.
+Оказалось, что дизайнерам очень не нравятся скриншоты проекта, сделанные на Windows.
+Эмодзи, которыми пестрят сообщения в социальных сетях отображаются совершенно не "как нужно".
+Пришла пора погрузиться в теорию и разобраться, что же не так с эмоджи. Приступим.
 
-1. Download and unzip [template archive](http://shwr.me/shower.zip)
-2. Open `index.html` and start creating your presentation
+### Немного истории.
 
-## Advanced
+Эмодзи - это язык идеограм и смайликов, где вместо слов используются сочетания картинок. Он появился в Японии и распространился по всему миру.
 
-1. Clone this repository locally `git clone git@github.com:shower/shower.git`.
-2. [Create](https://github.com/new) a new blank repository and copy its cloning address `git@github.com:USER/REPO.git`.
-3. Change remote of your local clone to the one you’ve just copied `git remote set-url origin git@github.com:USER/REPO.git`.
-4. Push your local clone to GitHub `git push -u origin master`.
-6. Install dependencies `npm install` and start it `npm start`.
+Первые Emoji появились в 1999 году в Японии, использовались операторами мобильной связи и работали на проприетарных стандартах.
 
-Once you’re done you can build a clean copy of your slides:
+Начиная с 2010 года, некоторые набор символов эмодзи были включены в Unicode, стандартную систему для индексирования символов, что позволило использовать их за пределами Японии и стандартизировать в разных операционных системах.
 
-	npm run prepare
+Сотни символов эмодзи были закодированы в Unicode 6.0, выпущенной в октябре 2010 года
 
-And you’ll find your presentation in `prepared` folder with only needed files in it. You can also run `npm run archive` to get the same files in `archive.zip`. But there’s more! You can easily publish your presentation online by running:
+Ядро эмодзи, установленное в Unicode 6.0, состояло из 722 символов, из которых 114 символов соответствуют последовательностям одного или нескольких символов в стандарте Unicode до 6.0, а остальные 608 символов сопоставляются с последовательностями одного или нескольких символов, введенных в Unicode 6.0.
 
-	npm run publish
+С ростом популярности эмодзи их количество только прибывало. Текущая версия Unicode 10.0 насчитывает 1144 одиночных символов эмоджи, но многие эмоджи кодируются последовательностью символов. Так что на самом деле их в разы больше.
 
-And you’ll have your slides published to `http://USER.github.io/REPO/`.
+В августе 2015 года была опубликована спецификация Emoji Version 1.0, которая включала в себя все эмодзи, добавленные в Unicode до 2015 года. Текущая версия спецификации Emoji - 5.0, релиз 18 мая 2017. Готовится шестая версия.
 
-## Usage Examples
+Состовляют эту спецификацию подкомитет Unicode Emoji, который является подкомитетом Технического комитета Unicode. Нынешние сопредседатели - Марк Дэвис (Google) и Питер Эдберг (Apple).
 
-- [Inhuman UI](https://pepelsbey.net/pres/inhuman-ui/)
-- [My Vanilla CSS](https://pepelsbey.net/pres/vanilla-css/)
-- [I’m in IoT](https://pepelsbey.net/pres/im-in-iot/)
-- [Enough Bricks](https://pepelsbey.net/pres/enough-bricks/)
+### Поддержка
 
-## Browser Support
+Спецификации - это здорово, но давайте посмотрим, что у нас с поддержкой.
 
-Latest stable versions of Chrome, Internet Explorer, Firefox, Opera and Safari are supported.
+Эмодзи отображаются при помощи шрифтов, где есть их поддержка. Для разных операционных систем это разные шрифты. Есть несколько открытых шрифтов, которые можно устанавливать в систему для поддержки эмодзи.
 
-## Contributing
+```css
+font-family: "Apple Color Emoji","Segoe UI Emoji","NotoColorEmoji","Segoe UI Symbol","Android Emoji","EmojiSymbols";
+```
 
-You’re always welcome to contribute. Fork project, make changes and send it as pull request. But it’s better to file an [issue](https://github.com/shower/shower/issues) with your idea first. Read [contributing rules](CONTRIBUTING.md) for more details.
+Кроме того, хорошо бы иметь клавиатуру для эмодзи для возможности их удобно использовать.
+Такие клавиатуры присутствуют в Android с 4.3, в Windows c 8.1, в iOS c 5, в OS X c 10.7 Lion. Не очень трудно самому написать такую клавиатуру.
 
-Main contributors in historical order: [pepelsbey](https://github.com/pepelsbey), [jahson](https://github.com/jahson), [miripiruni](https://github.com/miripiruni), [kizu](https://github.com/kizu), [artpolikarpov](https://github.com/artpolikarpov), [tonyganch](https://github.com/tonyganch), [zloylos](https://github.com/zloylos).
+Facebook, Twitter, VK заменяют все unicode эмодзи, используемые на своих сайтах, своей собственной графикой.
+Twitter выпустил Twemoji, который является их графикой эмодзи вместе с библиотекой Javascript для их обработки
 
----
-Licensed under [MIT License](LICENSE.md).
+Как видим, даже при наличие четких спецификаций, поддержка сильно различается, и гиганты стремятся использовать свои собственные наборы графики.
+
+### Почему так происходит?
+
+1) Давайте-ка выберем шрифт
+
+Вы можетесь полагаться на систему при рендеринге эмодзи, но тогда полностью теряете контроль над их внешним видом.
+Вы можете подключить свой шрифт, но такие шрифты достаточно объемные для передачи по сети.
+
+2) Эмодзи часто являются причиной недопонимания
+
+Если положиться на систему при рендеринге эмодзи, то одни и те же эмодзи могут выглядеть настолько по-разному, что пользователи не поймут друг друга.
+
+### Как с этим жить?
+
+Мы приняли решение не выпендриваться и поступить как крупные веб-сервисы, контент с которых мы используем.
+
+1) Подготавливаем набор поддерживаемых эмодзи в виде нужных нам картинок и кладем в проект или на CDN.
+
+2) Пишем парсер, заменяющий символы эмодзи на нужный тег IMG
+
+3) Радуемся кросбраузерности
+
+Теперь остается только вовремя добавлять новые картинки в соответствии со спецификацией Emoji.
+
+### Правильно ли это?
+
+Конечно, не правильно.
+
+Никакой проблемы не было, если бы спецификация обязала всех вендоров использовать один шрифт для рендеринга эмодзи. Сейчас ситуация похоже на ту, как несколько лет назад каждый производитель мобильных телефонов делал собственные форматы зарядных устройств.
+
+Когда я набираю на клавитуре символ "А", я ожидаю, что его прочитают именно как "А", даже если он будет отредерен другим шрифтов. С эмодзи все не так, "удивление" в разных шрифтах выглядит совершенно по-разному.
+
+Нам остается как-то фиксировать набор эмодзи, доступный для использования.

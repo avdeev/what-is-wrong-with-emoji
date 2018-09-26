@@ -3,41 +3,64 @@
 
 <head>
   <title>Что не так с эмоджи - Алексей Авдеев</title>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen-16x10.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/shower-ribbon/styles/styles.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+            --ribbon-size: 40px;
+            font-size: 22px;
+        }
+
+        .progress::before {
+            background-color: #fa1100;
+        }
+
+        .slide {
+            background: #fff url(pictures/fcconf_bg.png) no-repeat;
+            background-size: cover;
+        }
+
+        .slide::after {
+            top: auto;
+            bottom: 0;
+            left: 40px;
+            right: auto;
+            color: initial;
+            background: none;
+        }
+    </style>
 </head>
 
 <body class="shower full">
   <header class="caption">
     <h1>Что не так с эмоджи</h1>
-    <p><a href="https://alexey-avdeev.com/">Алексей Авдеев</a>, Neuron.Digital</p>
+    <p><a href="https://alexey-avdeev.com/">Алексей Авдеев</a>, <a href="https://neuron.digital/">Neuron.Digital</a>
   </header>
 
-  <section class="slide" id="cover">
-    <h2>Что не так с эмоджи</h2>
-    <p>Решаем проблему, попутно разбираясь в спецификациях Emoji и Unicode.</p>
-    <figure>
-      <img class="cover" src="pictures/Emojione_1F914.svg" alt="Emoji">
-    </figure>
-    <style>
-      #cover h2 {
-        margin: 375px 0 0;
-        color: #000;
-        text-align: center;
-        font-size: 70px;
-        text-shadow: 1px 1px 0px #000;
-      }
-      #cover p {
-        margin: 10px 0 0;
-        text-align: center;
-        color: #000;
-        font-style: italic;
-        font-size: 20px;
-      }
-    </style>
-  </section>
+    <section class="slide clear" id="cover" style="background-image: none;">
+        <h2>Что не так с эмоджи</h2>
+        <p><a href="https://alexey-avdeev.com/">Алексей Авдеев</a>, <a href="https://neuron.digital/">Neuron.Digital</a></p>
+        <figure>
+            <img class="cover h" src="pictures/fcconf_title.png" alt="FrontendConf Background">
+        </figure>
+        <style>
+            #cover h2 {
+                margin: 0;
+                color: #000;
+                font-size:60px;
+            }
+            #cover p {
+                margin: 10px 0 0;
+                color: #000;
+                font-size: 30px;
+            }
+            #cover p a {
+                color: #000;
+            }
+        </style>
+    </section>
 
   <section class="slide">
     <h2>👨‍💻 О себе</h2>
@@ -45,7 +68,7 @@
       <li class="next">👨 Алексей Авдеев</li>
       <li class="next">🏙️ Из Нижнего Новгорода, работаю в Москве</li>
       <li class="next">🌐 Neuron.Digital</li>
-      <li class="next">👔 Руковожу командой из 10 фронтенд разработчиков</li>
+      <li class="next">👔 Руковожу командой из 10 фронтенд-разработчиков</li>
       <li class="next">👴 Программирую с 2002 года</li>
       <li class="next">🤹 Сейчас активно использую React</li>
     </ol>
@@ -179,7 +202,7 @@
   </section>
 
   <section class="slide">
-    <h2>Мод. Фитцпатрика 🏻 🏼 🏽 🏾 🏿</h2>
+    <h2>Мод Фитцпатрика 🏻 🏼 🏽 🏾 🏿</h2>
     <table>
       <tr>
         <tr>
@@ -271,7 +294,7 @@
       </tbody>
     </table>
 
-    <p class="note">http://unicode.org/emoji/charts/emoji-zwj-sequences.html</p>
+    <p class="note"><a href="http://unicode.org/emoji/charts/emoji-zwj-sequences.html" target="_blank">http://unicode.org/emoji/charts/emoji-zwj-sequences.html</a></p>
   </section>
 
   <section class="slide">
@@ -475,7 +498,7 @@
       <figcaption>UNICODE EMOJI 5.0</figcaption>
     </figure>
 
-    <p class="note">http://unicode.org/reports/tr51/</p>
+    <p class="note"><a href="http://unicode.org/reports/tr51/" target="_blank">http://unicode.org/reports/tr51/</a></p>
   </section>
 
   <section class="slide">
@@ -506,7 +529,7 @@
       <code>&#x3C;img alt=&#x22;&#x1F30E;&#x22; src=&#x22;/apple40/<mark>1f30e</mark>.png&#x22;&#x3E;!</code>
     </pre>
 
-    <p class="note">https://github.com/Julia-Lavrova/emoji-js</p>
+    <p class="note"><a href="https://github.com/Julia-Lavrova/emoji-js" target="_blank">https://github.com/Julia-Lavrova/emoji-js</a></p>
   </section>
 
   <section class="slide">
@@ -524,7 +547,7 @@
       <code>&lt;img alt=&quot;&#x1F496;&quot; src=&quot;/apple40/<mark>1f496</mark>.png&quot; /&gt;</code>
     </pre>
 
-    <p class="note">https://github.com/Julia-Lavrova/emoji-js</p>
+    <p class="note"><a href="https://github.com/Julia-Lavrova/emoji-js" target="_blank">https://github.com/Julia-Lavrova/emoji-js</a></p>
   </section>
 
   <section class="slide">
@@ -596,9 +619,14 @@
     <h2 class="shout">Вопросы❓</h2>
   </section>
 
-  <div class="progress"></div>
-  <script src="node_modules/shower-core/shower.min.js"></script>
-  <!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+    <footer class="badge">
+        <a href="https://github.com/shower/shower">Powered by Shower</a>
+    </footer>
+
+    <div class="progress"></div>
+
+    <script src="node_modules/shower-core/shower.min.js"></script>
+    <!-- Copyright © 2018 Yours Truly, Famous Inc. -->
 </body>
 
 </html>
