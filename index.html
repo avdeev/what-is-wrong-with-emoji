@@ -629,8 +629,38 @@
     </pre>
   </section>
 
-  <!-- вывод, своё видение -->
+  <section class="slide">
+    <h2>*️⃣ Универсальное</h2>
 
+    <pre>
+      <code>'👩🏿'</code>
+      <code><mark>.split('')</mark></code>
+      <code>.reduce((result, currentChar) => {</code>
+      <code>  const code = <mark>currentChar.charCodeAt(0).toString(16)</mark>;</code>
+      <code>  const code4 = <mark>`000${code}`.substr(-4)</mark>;</code>
+      <code>  return `${result}<mark>\\u${code4}</mark>;`</code>
+      <code>}, ''); // <span class="comment">\ud83d\udc69\ud83c\udfff</span></code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>*️⃣ Универсальное</h2>
+
+    <pre>
+      <code>const reg = new RegExp('</code>
+      <code>  <mark>\ud83d\udc69\ud83c\udfff</mark>|\ud83e</code>
+      <code>', 'g');</code>
+    </pre>
+
+    <pre class="next">
+      <code>txt.replace(reg, (match, p1) =></code>
+      <code>  `&lt;img src="/apple40/<mark>${toCodePoint(p1)}</mark>.png" alt="" /&gt;`</code>
+      <code>);</code>
+    </pre>
+  </section>
+
+
+  <!-- вывод, своё видение -->
   <section class="slide">
     <h2 class="shout">Что делать❓</h2>
   </section>
@@ -657,7 +687,6 @@
       <li class="next">Лучше рисуйте стикеры 😀</li>
     </ol>
   </section>
-
 
   <section class="slide">
     <h2 class="shout">Бонус</h2>
