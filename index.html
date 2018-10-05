@@ -147,7 +147,7 @@
   </seciton>
 
   <section class="slide">
-    <h2 class="shout" style="font-size: 4.5em;">Эмоджи <br>vs <br>эмодзи❓</h2>
+    <h2 class="shout" style="font-size: 4.5em;">Эмоджи <br>vs <br>Эмодзи</h2>
   </section>
 
   <section class="slide">
@@ -212,7 +212,7 @@
   </section>
 
   <section class="slide">
-    <h2>Unicode Emoji</h2>
+    <h2>The Unicode Emoji Subcommittee 👨‍💼</h2>
 
     <figure class="next" style="display: inline-block; font-size: 0.8em;">
       <img style="width: 250px;" src="pictures/Mark Davis.webp" alt="Mark Davis">
@@ -391,7 +391,7 @@
   </section>
 
   <seciton class="slide">
-    <h2>Новинки</h2>
+    <h2>Новинки 2018 🆕</h2>
 
     <figure class="next" style="display: inline-block; font-size: 0.55em; text-align: center;">
       <img src="pictures/emoji-component-red-hair_1f9b0.png" width="200" alt="">
@@ -597,6 +597,10 @@
     <img class="cover" src="pictures/accidentally-sending-friends-a-hairy-heart-emojiexternal.png" alt="">
   </section>
 
+  <section class="slide">
+    <h2 class="shout">Ошибок ещё много</h2>
+  </section>
+
   <!-- эмоджи, которые мы понимаем неправильно -->
   <section class="slide">
     <div class="place" style="text-align: center; margin-top: -20px;">
@@ -637,7 +641,7 @@
       <code>&#x3C;img alt=&#x22;&#x1F30E;&#x22; src=&#x22;/apple40/<mark>1f30e</mark>.png&#x22;&#x3E;!</code>
     </pre>
 
-    <p class="note">https://github.com/Julia-Lavrova/emoji-js</p>
+    <p class="note next">https://github.com/Julia-Lavrova/emoji-js</p>
   </section>
 
   <section class="slide">
@@ -655,7 +659,7 @@
       <code>&lt;img alt=&quot;&#x1F496;&quot; src=&quot;/apple40/<mark>1f496</mark>.png&quot; /&gt;</code>
     </pre>
 
-    <p class="note">https://github.com/Julia-Lavrova/emoji-js</p>
+    <p class="note next">https://github.com/Julia-Lavrova/emoji-js</p>
   </section>
 
   <section class="slide">
@@ -665,20 +669,6 @@
       <code>'🤙'</code>
       <code class="next">  .charCodeAt(0)</code>
       <code class="next">  .toString(16); <span class="comment">// d83e</span></code>
-    </pre>
-  </section>
-
-  <section class="slide">
-    <h2>*️⃣ Универсальное</h2>
-
-    <pre>
-      <code>'👩🏿'</code>
-      <code><mark>.split('')</mark></code>
-      <code>.reduce((result, currentChar) => {</code>
-      <code>  const code = <mark>currentChar.charCodeAt(0).toString(16)</mark>;</code>
-      <code>  const code4 = <mark>`000${code}`.substr(-4)</mark>;</code>
-      <code>  return `${result}<mark>\\u${code4}</mark>;`</code>
-      <code>}, ''); // <span class="comment">\ud83d\udc69\ud83c\udfff</span></code>
     </pre>
   </section>
 
@@ -741,6 +731,7 @@
       <li class="next">Поддерживает ли ваш проект эмоджи</li>
       <li class="next">Системные шрифты или свой набор</li>
       <li class="next">Какую версию эмоджи поддерживать</li>
+      <li class="next">Лицензия</li>
     </ol>
   </section>
 
