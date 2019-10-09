@@ -1,10 +1,14 @@
 # Что не так с эмоджи - Алексей Авдеев
 
-[WSD Минск, 21 октября 2017](https://wsd.events/2017/10/21/)
-
 Почему мои эмоджи выглядят по-разному в разных браузерах? Что делать, если дизайнеры говорят, что все смайлики должны выглядеть, как на Айфоне? Решаем проблему, попутно разбираясь в спецификациях Emoji и Unicode.
 
-Видео - [Что не так с Emoji, Алексей Авдеев](https://www.youtube.com/watch?v=DUwZpLBSuiI)
+[Доклад в программе WSD Минск, 21 октября 2017](https://wsd.events/2017/10/21/)
+
+[Видео c WSTD](https://www.youtube.com/watch?v=DUwZpLBSuiI)
+
+[Доклад в программе FrontendConf2018](https://frontendconf.ru/moscow/2018/abstracts/4002)
+
+[Видео с FrontendConf2018](https://www.youtube.com/watch?v=exb0fsYPfBY)
 
 ## План доклада
 
